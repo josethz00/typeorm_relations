@@ -1,0 +1,8 @@
+yarn typeorm migration:create -- -n createClass
+yarn typeorm migration:run
+yarn typeorm entity:create -n Class
+yarn typeorm migration:generate -- -n createTables  //criará as migrações com base nas entidades
+yarn typeorm migration:run
+yarn typeorm migration:generate -- -n RelationContentLesson
+yarn typeorm migration:generate -- -n CreateInstitution
+yarn typeorm migration:revert
